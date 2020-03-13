@@ -4,10 +4,9 @@ import './index.css';
 
 function App() {
   return (
-    <div className="App">
-    <div id="blog-main p-10 bg-secondary m-4 border"> 
+    <div className="App bg-gray-600">
+    <div id="blog-main p-10 "> 
       <header className="App-header p-4 m-4">
-        <img src={logo} className="App-logo" alt="logo" />
       </header>
     </div>
     </div>
