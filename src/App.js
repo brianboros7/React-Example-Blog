@@ -1,38 +1,18 @@
-import React from 'react';
-import { Component } from 'react'; 
-import { useState, useEffect } from 'react'; 
+import React, { Component } from 'react';
+// import {  Switch, Route, Redirect, BrowserRouter } from 'react-router-dom';
 import './index.css';
 import Header from './components/Header';
-import Footer from './components/Footer';
+import MainSection from './pages/landing/MainSection'; 
+// import Footer from './components/Footer';
+
 
 function App() { 
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const result =  await fetch("https://orangevalleycaa.org/api/videos").then(
-
-      response => response.json()
-      );
-      setData(result); 
-    };
-    fetchData();
-  }, []); 
-  return (
-    <div className="App ">
+  return( 
+    <div> 
       <Header /> 
-      <div className="blog-main h-40 bg-blue-600"> 
-      {data.map(video => (
-        <div>
-          <h2> {video.name} </h2>
-          <video height={100} controls src={video.video_url} /> 
-        </div> 
-      ))}
-      </div>
-
-      <Footer /> 
-    </div>
-  );
+      <MainSection /> 
+    </div> 
+  )
 }
 
 
