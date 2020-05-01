@@ -16,9 +16,6 @@ function MainSection() {
             <div>
                 <h3> Video API </h3>
             </div>
-            <div> 
-                
-            </div>
         </div> 
     )
 }   
