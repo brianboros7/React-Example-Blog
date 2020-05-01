@@ -1,9 +1,9 @@
 import React from 'react';
  
-function BlogPage() {
+function BlogPage(props) {
     return (  
         <div> 
-            <h1> Muy Blog Renders!!! </h1>
+            <h1> My Blog Renders!!! </h1>
         </div>
     )
 }
