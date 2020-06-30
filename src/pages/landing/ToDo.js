@@ -1,12 +1,23 @@
 import React from 'react';
 
 function ToDoItem() {
+
     return(
         <div>
-            <input type=" checkbox " /> 
-            <p> </p>
-        </div>
+            <div>
+                <input type="checkbox" /> 
+                <p>Place text here </p>
+            </div>
+            <div>
+                <input type="checkbox" /> 
+                <p>Place text here </p>
+            </div>
+            <div>
+                <input type="checkbox" /> 
+                <p>Place text here </p>
+            </div>
+        </div> 
     )
 }
 
-export default ToDo
+export default ToDoItem; 
