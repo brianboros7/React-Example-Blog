@@ -1,7 +1,6 @@
 import React from 'react'; 
-import jokeData from './pages/jokes/JokesData'; 
 
-function Jokes(props) { 
+function Joke(props) { 
     return (
         <div>
             <h3 stale={{display: !props.question && "none"}}>Question: {props.question}</h3>
@@ -10,4 +9,4 @@ function Jokes(props) {
     )
 }
 
-export deafault Jokes; 
+export default Joke; 

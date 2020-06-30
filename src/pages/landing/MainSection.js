@@ -1,16 +1,17 @@
 import React, { Component } from 'react'; 
 import ToDoItem from '../../pages/landing/ToDo';
 // import VideoAPI from './component/VideoAPI'; 
-import Joke from './pages/jokes/Jokes'; 
+import Joke from './pages/jokes/Joke'; 
+import jokeData from './pages/jokes/JokesData'; 
 
 function MainSection() {
-    const jokeComponents = JokesData.map(jokes => {
+    const jokeComponents = JokesData.map(joke => 
         <Joke 
-            key={jokes.id} 
-            question={jokes.question} 
-            punchLine={jokes.punchLine} 
+            key={joke.id} 
+            question={joke.question} 
+            punchLine={joke.punchLine} 
         /> 
-    });
+    )
     
     const date = new Date()
     const hours = date.getHours()
@@ -33,7 +34,7 @@ function MainSection() {
             </div>
 
             <div> 
-                {jokeComponents}
+                <h2> {jokeComponents}</h2> 
             </div>
 
             <div>
