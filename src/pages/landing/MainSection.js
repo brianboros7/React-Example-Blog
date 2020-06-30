@@ -1,10 +1,13 @@
-import React, { Component } from 'react'; 
-import ToDoItem from '../../pages/landing/ToDo';
+import React from 'react'; 
+import ToDoItem from '../landing/todo-app/ToDoItem';
+import ToDosData from '../landing/todo-app/ToDosData'; 
 // import VideoAPI from './component/VideoAPI'; 
-import Joke from './pages/jokes/Joke'; 
-import jokeData from './pages/jokes/JokesData'; 
+import Joke from '../jokes/Joke'; 
+import JokesData from '../jokes/JokeData'; 
 
 function MainSection() {
+    const todoItems = ToDosData.map(item => <ToDoItem key={item.id} item={item} />)
+
     const jokeComponents = JokesData.map(joke => 
         <Joke 
             key={joke.id} 
@@ -29,19 +32,22 @@ function MainSection() {
             <div>
                 <h2>Content</h2>
             </div>
-            <div>
-                <h3> Video API </h3>
-            </div>
 
             <div> 
-                <h2> {jokeComponents}</h2> 
+                <h2>{jokeComponents}</h2> 
+            </div>
+
+            <div>
+                <h3> Video API </h3>
             </div>
 
             <div>
                 <h2> Good {timeOfDay}!</h2>
             </div>
 
-            <ToDoItem /> 
+            <div className="todo-item"> 
+                <h3>{todoItems}</h3>
+            </div> 
         </div> 
     )
 }   
