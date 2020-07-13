@@ -1,7 +1,8 @@
 import React from 'react'; 
 
-// import VideoAPI from './component/VideoAPI'; 
+import VideoAPI from './../../components/VideoAPI'; 
 import ToDoApp from '../landing/todo-app/ToDoApp'; 
+//import PractiseES6 from './../../components/PractiseES6'; 
 
 class MainSection extends React.Component {
     
@@ -16,9 +17,15 @@ class MainSection extends React.Component {
 
                 <div> 
                     <ToDoApp /> 
+                </div>
+
+            
+                <div>
+                    <VideoAPI /> 
                 </div> 
-            </div>
+            </div>            
         )
     }
 }
+
 export default MainSection; 
