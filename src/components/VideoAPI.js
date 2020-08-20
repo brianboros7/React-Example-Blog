@@ -15,7 +15,7 @@ function VideoAPI() {
     }, []);
 
     return (
-        <div class="video-api" > 
+        <div className="video-api" > 
             <header> 
                 <h4>Video API video's </h4>
             </header>

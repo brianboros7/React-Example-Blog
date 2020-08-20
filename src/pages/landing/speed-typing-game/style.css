@@ -1,0 +1,36 @@
+.speed-typing-section {
+    background-color: black; 
+    color: #00b800; 
+    padding-top: 10px; 
+    font-family: 'Press Start 2p', cursive; 
+    font-weight: 400; 
+}
+
+.speed-typing-btn {
+    margin: none; 
+    border: none; 
+    color: black; 
+    background: #a80020; 
+    background: #00b800; 
+    padding: 10px 20px; 
+    text-transform: uppercase;
+    text-align: center; 
+}
+
+h1 {
+    font-size: 20px; 
+    text-align: center; 
+}
+
+textarea {
+    font-family: 'Press Start 2P', cursive;
+    border: 3px solid black;
+    width: 90%;
+    margin: 0 auto;
+    outline: none;
+    height: 200px;
+    color: black; 
+    background: #00b800;
+    padding: 10px;
+}
+

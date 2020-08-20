@@ -3,5 +3,17 @@
 @tailwind utilities;
 
 body {
+    margin: 0; 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo {
+    width: 99px; 
+}
+.logo img {
+    width: 100%; 
+}
+
+.menu-btn {
+    border: 1px solid black;
 }

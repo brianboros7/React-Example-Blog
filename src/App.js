@@ -15,9 +15,8 @@ export default function App() {
   return (   
       <Router>
         <Header /> 
-
         <Switch> 
-         <Route
+          <Route
             path="/" exact > 
             <MainSection /> 
           </Route> 
@@ -29,7 +28,6 @@ export default function App() {
             path="/blog">
             <BlogPage />  
           </Route> 
-            
         </Switch>
       </Router>
     )

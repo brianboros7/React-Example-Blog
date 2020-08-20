@@ -1,13 +1,3 @@
 @tailwind base;
 @tailwind component; 
 @tailwind utilities; 
-
-body {
-    margin: 0; 
-}
-.logo {
-    width: 99px; 
-}
-.logo img {
-    width: 100%; 
-}
