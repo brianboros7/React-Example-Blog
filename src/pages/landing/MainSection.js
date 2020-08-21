@@ -11,7 +11,7 @@ function MainSection(isDayTime) {
             <div> 
                 <h3>
                     {isDayTime ? "Good day" : "Good evening"}, thanks for checking out some stuff I've learned. 
-                    Below you'll find a mix of things such as API's, JavaScript functions, render props, and fidn links to the associated Github repo to see the code I used which came from courses I've taken while learning React.
+                    Below you'll find a mix of things such as API's, JavaScript functions, render props, and links to the associated Github repo to see the code I used which came from courses I've taken while learning React.
                 </h3>
             </div> 
 

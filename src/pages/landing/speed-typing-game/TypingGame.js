@@ -1,8 +1,11 @@
-import React, {useState} from 'react'; 
+import React, {useState, useEffect} from 'react'; 
 import './style.css'; 
 
 function TypingGame() {
     const [text, setText] = useState("")
+    const [timeRemaining, setTimeRemaining] = useState(10)
+    const [isTimeRunning, setIsTimeRunning] = useState(false)
+    const [wordCount, setWordCount] = useState(0) 
 
     function handleChange(e) {
         const {value} = e.target 
@@ -10,10 +13,20 @@ function TypingGame() {
     }
 
     function calculateWordCount(text) {
-        const wordArr = text.split(" ")
-        console.log(wordArr.length)
-        return wordArr.length 
+        const wordsArr = text.trim().split(" ")
+        return wordsArr.filter(word => word !== "").length 
     }
+
+    useEffect((text) => {
+        if (isTimeRunning && timeRemaining > 0) {
+            setTimeout(() => {
+                setTimeRemaining(time => time - 1)
+            }, 1000)  
+        } else if(timeRemaining === 0) {
+            setIsTimeRunning(false)
+            setWordCount(calculateWordCount(text))
+        }
+    }, [timeRemaining, isTimeRunning]) 
 
     return (
         <div className="speed-typing-section"> 
@@ -24,16 +37,15 @@ function TypingGame() {
                 onChange={handleChange}
                 value={text}
             />
-            <h4 className="my-3">
-                Time remaining: ??? 
+            <h4 className="my-2">
+                Time remaining: {timeRemaining}
             </h4> 
-            <buttton 
+            <button 
                 className="speed-typing-btn"
-                onClick={() => calculateWordCount(text)}
-            >
+                onClick={() => setIsTimeRunning(true)}>
                 Start
-            </buttton>
-            <h1 className="my-3">Word count: ???</h1>
+            </button>
+            <h1 className="my-3">Word count: {wordCount}</h1>
         </div>
     )
 }
