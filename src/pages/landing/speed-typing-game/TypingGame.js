@@ -17,22 +17,25 @@ function TypingGame() {
         return wordsArr.filter(word => word !== "").length 
     }
 
-    useEffect((text) => {
+    useEffect(() => {
         if (isTimeRunning && timeRemaining > 0) {
             setTimeout(() => {
                 setTimeRemaining(time => time - 1)
-            }, 1000)  
-        } else if(timeRemaining === 0) {
+            }, 1000) 
+        } 
+    }, [timeRemaining, isTimeRunning])
+    
+    useEffect(() => { 
+        if(timeRemaining === 0) { 
             setIsTimeRunning(false)
-            setWordCount(calculateWordCount(text))
+            setWordCount(calculateWordCount())
         }
-    }, [timeRemaining, isTimeRunning]) 
+    }, [timeRemaining])
 
     return (
         <div className="speed-typing-section"> 
             <h2>Good morning, how fast can you type today?</h2>
 
-            
             <textarea
                 onChange={handleChange}
                 value={text}
