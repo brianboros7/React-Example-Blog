@@ -17,20 +17,26 @@ function TypingGame() {
         return wordsArr.filter(word => word !== "").length 
     }
 
+    function startGame() {
+        setIsTimeRunning(true)
+        setTimeRemaining(10)
+        setText("")
+    }
+
+    function endGame() {
+        setIsTimeRunning(false)
+        setWordCount(calculateWordCount(text)) 
+    }
+
     useEffect(() => {
         if (isTimeRunning && timeRemaining > 0) {
             setTimeout(() => {
                 setTimeRemaining(time => time - 1)
             }, 1000) 
-        } 
-    }, [timeRemaining, isTimeRunning])
-    
-    useEffect(() => { 
-        if(timeRemaining === 0) { 
-            setIsTimeRunning(false)
-            setWordCount(calculateWordCount())
+        } else if(timeRemaining === 0) { 
+            endGame()
         }
-    }, [timeRemaining])
+    }, [timeRemaining, isTimeRunning])
 
     return (
         <div className="speed-typing-section"> 
@@ -45,7 +51,7 @@ function TypingGame() {
             </h4> 
             <button 
                 className="speed-typing-btn"
-                onClick={() => setIsTimeRunning(true)}>
+                onClick={startGame}>
                 Start
             </button>
             <h1 className="my-3">Word count: {wordCount}</h1>
