@@ -3,7 +3,7 @@ import './style.css';
 
 function TypingGame() {
     const [text, setText] = useState("")
-    const [timeRemaining, setTimeRemaining] = useState(10)
+    const [timeRemaining, setTimeRemaining] = useState(40)
     const [isTimeRunning, setIsTimeRunning] = useState(false)
     const [wordCount, setWordCount] = useState(0) 
     const textBoxRef = useRef(null)
@@ -20,7 +20,7 @@ function TypingGame() {
 
     function startGame() {
         setIsTimeRunning(true)
-        setTimeRemaining(10)
+        setTimeRemaining(40)
         setText("")
         textBoxRef.current.disabled = false 
         textBoxRef.current.focus()

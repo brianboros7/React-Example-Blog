@@ -3,7 +3,7 @@ import React from 'react';
 import VideoAPI from './../../components/VideoAPI'; 
 import ToDoApp from '../landing/todo-app/ToDoApp'; 
 import TypingGame from '../landing/speed-typing-game/TypingGame'; 
-//import PractiseES6 from './../../components/PractiseES6'; 
+import MovieSearch from './movie-search/MovieSearch'; 
 
 function MainSection(isDayTime) {
     return (  
@@ -18,6 +18,11 @@ function MainSection(isDayTime) {
             <div> 
                 <h3>This is a little to-do app similar to apps liek Asana.</h3>
                 <ToDoApp /> 
+            </div>
+
+            <div> 
+                <h3>This is a Movie App</h3>
+                <MovieSearch /> 
             </div>
             
             <div>
@@ -36,4 +41,4 @@ function MainSection(isDayTime) {
     )
 }
 
-export default MainSection; 
+export default MainSection
