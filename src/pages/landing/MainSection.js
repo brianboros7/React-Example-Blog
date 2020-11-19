@@ -2,7 +2,7 @@ import React from 'react';
 
 import VideoAPI from './../../components/VideoAPI'; 
 import ToDoApp from '../landing/todo-app/ToDoApp'; 
-import TypingGame from '../landing/speed-typing-game/TypingGame'; 
+// import TypingGame from '../landing/speed-typing-game/TypingGame'; 
 import MovieSearch from './movie-search/MovieSearch'; 
 
 function MainSection(isDayTime) {
@@ -35,7 +35,7 @@ function MainSection(isDayTime) {
 
             <div> 
                 <h3>This is a Speed Typing Game App that I've learned on Scrimba </h3>
-                <TypingGame /> 
+                {/* <TypingGame /> */}
             </div>
         </div>            
     )

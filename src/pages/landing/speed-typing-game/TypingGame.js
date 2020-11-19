@@ -31,7 +31,7 @@ function TypingGame() {
         setWordCount(calculateWordCount(text)) 
     }
 
-    useEffect(() => {
+    useEffect((endGame) => {
         if (isTimeRunning && timeRemaining > 0) {
             setTimeout(() => {
                 setTimeRemaining(time => time - 1)
