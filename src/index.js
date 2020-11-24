@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
 import App from './App';
+import {ContextProvider} from './pages/landing/ecommerce-capstone/Context'
+import {BrowserRouter as Router} from "react-router-dom"
+
 import * as serviceWorker from './serviceWorker';
 
 
@@ -11,4 +14,11 @@ import * as serviceWorker from './serviceWorker';
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <ContextProvider> 
+        <Router> 
+            <App />
+        </Router> 
+    </ContextProvider>, 
+    document.getElementById('root')
+)

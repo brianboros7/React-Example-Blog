@@ -46,4 +46,4 @@ function ContextProvider({children}) {
     )
 }
 
-export default {ContextProvider, Context} 
+export {ContextProvider, Context} 

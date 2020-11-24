@@ -12,7 +12,7 @@ function EcommerceCapstone() {
             <div className="ecommerce-capston-wrapper lg:py-10">
                 <div className="ecommerce-capstone-main"> 
                     <header className="ecommerce-capstone-header bg-red-400">
-                        <h4>Pic Some</h4>
+                        <h4>Pic Sum App</h4>
                     </header> 
 
                     <Cart /> 
