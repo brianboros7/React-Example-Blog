@@ -13,8 +13,8 @@ function DateTime() {
     }
 
     return (
-        <div> 
-            <h3>{timeOfDay} </h3>
+        <div className="date-time-wrapper"> 
+            <h3>{timeOfDay}</h3>
         </div>
     )
 }

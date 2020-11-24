@@ -25,16 +25,10 @@
 */
 @tailwind screens;
 
-.movie-search-wrapper {
-    padding: 2rem 0; 
-
+.day-time-container, .todo-app-container, .movie-search-conteiner {
+    margin: 0; 
+    padding: 1rem 0; 
 }
-.movie-search-main {
-    text-align: center; 
+.day-time-container, .movie-search-conteiner {
+    background-image: linear-gradient(to top, #445675, to bottom, #f120f1, to center, #339999)
 }
-.form input {
-    margin: 0 2px; 
-    padding: 0 2px; 
-}
-
-

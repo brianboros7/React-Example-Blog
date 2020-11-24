@@ -2,7 +2,7 @@
  * This injects Tailwind's base styles and any base styles registered by
  * plugins.
 */
-@tailwind base;
+ @tailwind base;
 
 /**
   * This injects Tailwind's component classes and any component classes
@@ -25,16 +25,12 @@
 */
 @tailwind screens;
 
-.movie-search-wrapper {
-    padding: 2rem 0; 
-
+body {
+    margin: 0; 
+    padding: 0; 
+    background-color: darkgoldenrod;
 }
-.movie-search-main {
-    text-align: center; 
+main {
+    margin: 0; 
+    padding: 0; 
 }
-.form input {
-    margin: 0 2px; 
-    padding: 0 2px; 
-}
-
-
