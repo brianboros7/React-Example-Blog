@@ -6,12 +6,17 @@ import ToDoApp from '../landing/todo-app/ToDoApp';
 import MovieSearch from './movie-search/MovieSearch'; 
 import EcommercePhotosApp from './ecommerce-capstone/EcommercePhotosApp'; 
 import {ContextProvider} from './ecommerce-capstone/Context'; 
+import NetflixMain from './netflix-react-example/NetFlixMain'; 
 
 
 function MainSection(isDayTime) {
 
     return (  
-        <main className="py-10">
+        <main className="main">
+            <div className="netflix-container py-10 bg-green-200">
+                <NetflixMain /> 
+            </div>
+
             <div className="date-time-container py-10 bg-green-400"> 
                 <h3>
                     {isDayTime ? "Good day" : "Good evening"}, thanks for checking out some stuff I've learned. 
