@@ -11,7 +11,9 @@ import { FirebaseContext } from './context/firebase';
 import * as serviceWorker from './serviceWorker';
 
 
-const config = {
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
     apiKey: "AIzaSyBXXZP4ogVJ0B3W3RhvqfqxtC8saaqBSYA",
     authDomain: "react-example-blog.firebaseapp.com",
     databaseURL: "https://react-example-blog.firebaseio.com",
@@ -19,11 +21,12 @@ const config = {
     storageBucket: "react-example-blog.appspot.com",
     messagingSenderId: "531283428180",
     appId: "1:531283428180:web:984d1c4fc746d779aabec1",
-    // measurementId: "G-1Q7KRE26R6"
-}
+    measurementId: "G-1Q7KRE26R6"
+  };
 
-const firebase = window.firebase.initializeApp(config);
-
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 
 
 // If you want your app to work offline and load faster, you can change
@@ -32,7 +35,7 @@ const firebase = window.firebase.initializeApp(config);
 serviceWorker.unregister();
 
 ReactDOM.render(
-    <FirebaseContext.Provider value={{ firebase: window.firebase }}> 
+    <FirebaseContext.Provider value={{ firebase: firebaseConfig }}> 
         <ContextProvider> 
             <Router> 
                 <GlobalStyles /> 
