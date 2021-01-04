@@ -6,10 +6,9 @@ import {ContextProvider} from './pages/landing/ecommerce-capstone/Context'
 import { GlobalStyles } from './global-styles';
 
 import {BrowserRouter as Router} from "react-router-dom"
-import { FirebaseContext } from './context/firebase';
+import { FirebaseContextProvider } from './context/firebase';
 
 import * as serviceWorker from './serviceWorker';
-
 
 
 
@@ -20,13 +19,13 @@ import * as serviceWorker from './serviceWorker';
 serviceWorker.unregister();
 
 ReactDOM.render(
-    <FirebaseContext.Provider value={{ firebase: firebaseConfig }}> 
+    <FirebaseContextProvider> 
         <ContextProvider> 
             <Router> 
                 <GlobalStyles /> 
                 <App />
             </Router> 
         </ContextProvider>
-    </FirebaseContext.Provider>, 
+    </FirebaseContextProvider>, 
     document.getElementById('root')
 )
