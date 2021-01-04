@@ -1,5 +1,4 @@
-import { createContext } from 'react';
-import firebase from 'firebase'; 
+import React from 'react'; 
 
 
 // Your web app's Firebase configuration
