@@ -2,18 +2,18 @@ import React, { useState, useEffect, useContext } from 'react';
 import Fuse from 'fuse.js';
 import { Card, Loading, Header, Player } from '../components';
 import * as ROUTES from '../constants/routes';
-import { FirebaseContext } from '../../../../context/firebase';
+import { FirebaseContextProvider } from '../../../../context/firebase';
 import { SelectProfileContainer } from './profiles';
 import { FooterContainer } from './footer';
 
-export function BrowseContainer({ slides }) {
+export function BrowseContainer({slides}) {
     const [category, setCategory] = useState('series');
     const [profile, setProfile] = useState({});
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
     const [slideRows, setSlideRows] = useState([]);
     
-    const { firebase } = useContext(FirebaseContext);
+    const { firebase } = useContext(FirebaseContextProvider);
     
     const user = {
         displayName: "Karl",
@@ -26,11 +26,11 @@ export function BrowseContainer({ slides }) {
         }, 3000);
     }, [user])
     
-    useEffect(() => {
+    useEffect((slides, category) => {
         setSlideRows(slides[category]);
     }, [slides, category]);
     
-    useEffect(() => {
+    useEffect((slides) => {
       const fuse = new Fuse(slideRows, { keys: ['data.description', 'data.title', 'data.genre'] });
       const results = fuse.search(searchTerm).map(({ item }) => item);
       
@@ -39,7 +39,9 @@ export function BrowseContainer({ slides }) {
       } else {
           setSlideRows(slides[category]);
       }
-    }, [searchTerm])
+        
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [slideRows, searchTerm])
     
     return profile.displayName ? (
         <>

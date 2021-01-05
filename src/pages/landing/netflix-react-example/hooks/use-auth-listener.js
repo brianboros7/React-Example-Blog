@@ -1,11 +1,11 @@
 import { useState, useEffect, useContext } from 'react';
-import { FirebaseContext } from '../../../../context/firebase';
+import { FirebaseContextProvider } from '../../../../context/firebase';
 
 export default function useAuthListener() {
     const [user, setUser] = useState(JSON.parse(localStorage.getItem('authUser')));
-    const { firebase } = useContext(FirebaseContext);
+    const  {firebase} = useContext(FirebaseContextProvider);
     
-    useEffect(() => {
+    useEffect((target) => {
         const listener = firebase.auth().onAuthStateChanged((authUser) => {
             if (authUser) {
                 localStorage.setItem('authUser', JSON.stringify(authUser));
@@ -17,6 +17,8 @@ export default function useAuthListener() {
         });
         
         return () => listener();
+        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     
     return { user };
