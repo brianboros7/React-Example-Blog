@@ -22,20 +22,21 @@ function MovieSearch() {
     }
 
     return(
-        <section className="movie-search-wrapper lg:py-10">
+        <section className="movie-search-wrapper lg:py-10 bg-green-100">
             <h3>This is a Movie App</h3>
             <div className="movie-search-main"> 
                 <div className="movie-search-content"> 
-                    <h2>Movie Seearch App</h2>
+                    <h2 className="p-2">Movie Seearch App</h2>
 
                     <form className="movie-search-form" onSubmit={searchMovies}>
-                        <label htmlFor="query" className="label">
+                        <label htmlFor="query" className="label p-2">
                             Movie Name
                         </label>
                         <input 
                             type="text" 
                             placeholder="search here" 
                             name="query" 
+                            className="p-1"
                             value={query} onChange={(e) => setQuery(e.target.value)}
                         />
                         <button className="movie-search-btn py-2 px-4 bg-indigo-500 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-75  " type="submit">

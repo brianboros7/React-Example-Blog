@@ -1,7 +1,9 @@
 header {
     width: 100%; 
     background-color: darkcyan; 
+    color: lightgreen;  
+
 }
-.logo {
-    width: 99px; 
+.nav-item {
+    font-size: 1.5rem; 
 }

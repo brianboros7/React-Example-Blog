@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import Fuse from 'fuse.js';
 import { Card, Loading, Header, Player } from '../components';
 import * as ROUTES from '../constants/routes';
-import { FirebaseContextProvider } from '../../../../context/firebase';
+import { FirebaseContextProvider } from '../../../context/firebase';
 import { SelectProfileContainer } from './profiles';
 import { FooterContainer } from './footer';
 

@@ -1,9 +1,12 @@
 import React from 'react';
 import './pages/landing/style.css';
-import Header from './components/app/Header';
-import About from './pages/landing/About'; 
-import BlogPage from './pages/blog/Blog'; 
 import MainSection from './pages/landing/MainSection';
+import NetFlixMain from './pages/netflix-react-example/NetFlixMain'; 
+import "tailwindcss/tailwind.css"
+import MovieSearch from './pages/movie-search/MovieSearch'; 
+import ToDoApp from './pages/todo-app/ToDoApp'; 
+import TypingGame from './pages/speed-typing-game/TypingGame'; 
+
 
 import { 
   BrowserRouter as Router, 
@@ -15,20 +18,27 @@ import {
 export default function App() {     
   return (   
       <Router>
-        <Header /> 
         <Switch> 
           <Route
             path="/" exact > 
             <MainSection /> 
           </Route> 
           <Route 
-            path="/about" > 
-            <About /> 
+            path="/netflix-react-example" > 
+            <NetFlixMain/> 
           </Route>  
           <Route 
-            path="/blog">
-            <BlogPage />  
+            path="/movie-search">
+            <MovieSearch />  
           </Route> 
+          <Route 
+            path="/todo-app">
+            <ToDoApp />  
+          </Route>
+          <Route 
+            path="/speed-typing-game">
+            <TypingGame />  
+          </Route>
         </Switch>
       </Router>
     )

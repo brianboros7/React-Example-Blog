@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
 import App from './App';
-import {ContextProvider} from './pages/landing/ecommerce-capstone/Context'
+import {ContextProvider} from './pages/ecommerce-capstone/Context'
+
 import { GlobalStyles } from './global-styles';
 
 import {BrowserRouter as Router} from "react-router-dom"
@@ -19,7 +20,7 @@ import * as serviceWorker from './serviceWorker';
 serviceWorker.unregister();
 
 ReactDOM.render(
-    <FirebaseContextProvider> 
+    <FirebaseContextProvider>
         <ContextProvider> 
             <Router> 
                 <GlobalStyles /> 
