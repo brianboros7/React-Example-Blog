@@ -12,8 +12,11 @@ function UnsplashAPI() {
         https://api.unsplash.com/photos/WkfDrhxDMC8?client_id=gK52De2Tm_dL5o1IXKa9FROBAJ-LIYqR41xBdlg3X2k
      */}
     const loadData = () => {
-        fetch("https://source.unsplash.com/random")
-        .then((response) => setPhotoUrl(response.url)) 
+        fetch("https://api.unsplash.com/photos/VzJjPuk53sk?client_id=gK52De2Tm_dL5o1IXKa9FROBAJ-LIYqR41xBdlg3X2k")
+        .then((response) => response.json())
+        .then(data => {
+            setPhotoUrl(data.urls.full)
+        }) 
     }
 
     useEffect(() => {
