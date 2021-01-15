@@ -5,12 +5,15 @@ function UnsplashAPI() {
     let [photoUrl, setPhotoUrl] = useState('');
     // let [query, setQuery] = useState("vampires");
     // const queryInput = useRef(null);
+    
+    /* eslint-disable */
 
     {/*
         * This api link works for Vanilla JS 
         but not React? 
         https://api.unsplash.com/photos/WkfDrhxDMC8?client_id=gK52De2Tm_dL5o1IXKa9FROBAJ-LIYqR41xBdlg3X2k
-     */}
+    */}
+
     const loadData = () => {
         fetch("https://api.unsplash.com/photos/VzJjPuk53sk?client_id=gK52De2Tm_dL5o1IXKa9FROBAJ-LIYqR41xBdlg3X2k")
         .then((response) => response.json())
@@ -23,6 +26,8 @@ function UnsplashAPI() {
         loadData()
     });
 
+    /* eslint-disable */
+
     {/*
     useEffect((e) => {
         e.loadData( {
@@ -34,11 +39,13 @@ function UnsplashAPI() {
     }, [query, url]);
     */}
 
+    /* eslint-disable */
+
     {/* 
-    const searchPhotos = e => {
-        e.preventDefault();
-        setQuery(queryInput.current.value);
-      };
+        const searchPhotos = e => {
+            e.preventDefault();
+            setQuery(queryInput.current.value);
+        };
     */}
 
     return(

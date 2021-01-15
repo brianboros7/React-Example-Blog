@@ -26,6 +26,7 @@ function TypingGame() {
         textBoxRef.current.focus()
     }
 
+    /* eslint-disable */
     function endGame() {
         setIsTimeRunning(false)
         setWordCount(calculateWordCount(text)) 
