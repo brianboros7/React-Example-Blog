@@ -1,6 +1,7 @@
 import React from 'react';
 import ToDoItem from './ToDoItem';
 import ToDosData from './ToDosData'; 
+import './style.css'
 
 class ToDoApp extends React.Component {
     constructor() {
@@ -36,7 +37,7 @@ class ToDoApp extends React.Component {
         handleChange={this.handleChange} />) 
         return (
             <div className="todo-list bg-green-100"> 
-                <h2>{todoItems} </h2>
+                <h2 className="todo-item p-2">{todoItems} </h2>
             </div>
         );
     }
