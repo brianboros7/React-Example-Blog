@@ -24,3 +24,8 @@ body {
 .projects-heading h3 {
   border: 2px solid #b48e89; 
 }
+
+.star-wars-container {
+  font-size: 2rem; 
+  font-wieght: bold; 
+}

@@ -41,7 +41,7 @@ function MainSection(isDayTime) {
                     </div>
                 </div>
             </section>
-            <section>
+            <section className="star-wares-containerpy-2">
                 <StarWars /> 
             </section>
         </main>            
