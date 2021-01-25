@@ -2,6 +2,7 @@ import React from 'react';
 import ToDoItem from './ToDoItem';
 import ToDosData from './ToDosData'; 
 import './style.css'
+// import ToDoFunction from './ToDoFunctional'
 
 class ToDoApp extends React.Component {
     constructor() {
@@ -36,8 +37,11 @@ class ToDoApp extends React.Component {
         const todoItems = this.state.todos.map(item => <ToDoItem key={item.id} item={item} 
         handleChange={this.handleChange} />) 
         return (
-            <div className="todo-list bg-green-100"> 
-                <h2 className="todo-item p-2">{todoItems} </h2>
+            <div> 
+                <div className="todo-list bg-green-100"> 
+                    <h2 className="todo-item p-2">{todoItems}</h2>
+                </div>
+             
             </div>
         );
     }

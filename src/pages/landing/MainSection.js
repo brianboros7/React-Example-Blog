@@ -3,6 +3,7 @@ import './style.css'
 import UnsplashAPI from '../../components/api/unsplash-photos/UnsplashAPI'; 
 import Header from './../../components/app/Header'
 import NetFlixMain from './../netflix-react-example/NetFlixMain'
+import StarWars from '../../components/api/star-wars/StarWars'
 
 function MainSection(isDayTime) {
      
@@ -39,6 +40,9 @@ function MainSection(isDayTime) {
 
                     </div>
                 </div>
+            </section>
+            <section>
+                <StarWars /> 
             </section>
         </main>            
     )
