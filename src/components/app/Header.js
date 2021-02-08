@@ -1,13 +1,12 @@
 import React from 'react';
-import NavBar from './../NavBar'; 
+import NavBar from './../menus/NavBar'; 
 import './style.css'
 
 function Header() {
-    // let menu = ['Home', 'About', 'Blog']
 
     return (
-        <header className="header-container bg-gray-600 ">
-            <div className="header-content text-align-center">
+        <header className="header-container bg-gray-800 ">
+            <div className="header-content">
                 <NavBar /> 
                 {/*
                 <button 

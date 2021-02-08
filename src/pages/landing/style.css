@@ -9,12 +9,23 @@ body {
 .main-header-image, .intro {
   width: 50%; 
 }
+.main-header-image {
+  padding: 15px 5px 30px 5px; 
+  max-width: 250px; 
+  max-height: auto; 
+}
+.main-header-image img {
+  width: 100%;  
+}
+
+.intro {
+  padding: 10px; 
+}
 .intro h1 {
-  font-size: 4rem; 
-  font-weight: bold; 
-  line-height: normal; 
+  font-size: 1rem; 
+  font-weight: 12; 
   text-align: left; 
-  padding: 25px 25px; 
+  padding: 4px 0; 
 }
 
 .projects-heading h2 {
@@ -23,9 +34,4 @@ body {
 }
 .projects-heading h3 {
   border: 2px solid #b48e89; 
-}
-
-.star-wars-container {
-  font-size: 2rem; 
-  font-wieght: bold; 
 }

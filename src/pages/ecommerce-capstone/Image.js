@@ -6,6 +6,7 @@ function Image({className, img}) {
     const [hovered, setHovered] = useState(false)
     const {toggleFavorite, addToCart, cartItems, removeFromCart} = useContext(Context)
 
+    // eslint-disable-next-line
     {/*
         const heartIcon = hovered && <i className="ri-heart-line favorite" onClick={() => toggleFavorite(img.id)}></i>
     */}
@@ -17,6 +18,7 @@ function Image({className, img}) {
         }
     }
 
+    // eslint-disable-next-line
     {/*
         const cartIcon = hovered && <i className="ri-add-circle-line cart"></i>
     */}
@@ -37,7 +39,7 @@ function Image({className, img}) {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         >
-            <img src={img.url} className="image-grid"/>
+            <img src={img.url} className="image-grid" alt={''} />
             {heartIcon()}
             {cartIcon()}
         </div>

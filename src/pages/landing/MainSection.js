@@ -1,23 +1,20 @@
 import React from 'react'; 
-import './style.css'
-import UnsplashAPI from '../../components/api/unsplash-photos/UnsplashAPI'; 
-import Header from './../../components/app/Header'
-import NetFlixMain from './../netflix-react-example/NetFlixMain'
+import './style.css'; 
 import StarWars from '../../components/api/star-wars/StarWars'
+import UnsplashAPI from '../../components/api/unsplash-photos/UnsplashAPI'; 
 
-function MainSection(isDayTime) {
-     
-
+function MainSection(isDayTime) {  
 
     return (  
         <main className="main bg-green-100">
             <section className="main-header flex">
-                <div className="main-header-image">
+                <div className="main-header-image p-4">
                     <UnsplashAPI />  
                 </div>
-                <div className="intro py-5">
-                    <h1>
-                        {isDayTime ? "Good day" : "Good evening"}, thanks for checking out some stuff I've built with React tool's. 
+                <div className="intro p-4">
+                    <h1 className="p-1">
+                        {isDayTime ? "Good day" : "Good evening"} <StarWars className="p-1" />,   
+                        thanks for checking out some stuff I've built with the React JavaScript Framwork and soem other cool tool's and tech. 
                     </h1>
                 </div> 
             </section> 
@@ -29,20 +26,7 @@ function MainSection(isDayTime) {
                         and links to the associated Github repo to see the code I used which came from courses I've taken while learning 
                         React. 
                     </h3>
-                    <h4 className="py-2">
-                        Search Projects:
-                    </h4>
                 </div>
-                <Header /> 
-                <NetFlixMain /> 
-                <div> 
-                    <div> 
-
-                    </div>
-                </div>
-            </section>
-            <section className="star-wares-containerpy-2">
-                <StarWars /> 
             </section>
         </main>            
     )

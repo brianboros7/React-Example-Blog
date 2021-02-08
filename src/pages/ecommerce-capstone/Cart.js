@@ -22,18 +22,18 @@ function Cart() {
 
 
     return(
-        <div className="cart-page">
-            <h3>Check Out</h3>
+        <main className="cart-page">
+            <h1>Check out</h1>
             {cartItemElements}
             <p className="total-cost">Total: {totalCostDisplay}</p>
             {
                 cartItems.length > 0 ?
                 <div className="order-button">
-                    <button onClick={placeOrder}>{buttonText}</button>
+                    <button onClick={placeOrder} disabled={!cartItems.length}>{buttonText}</button>
                 </div> :
                 <p>You have no items in your cart.</p>
             }
-        </div>
+        </main>
     )
 }
 

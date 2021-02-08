@@ -1,16 +1,20 @@
-import React, {useState} from 'react' 
+import React, {useState, useEffect} from 'react' 
 
 function StarWars() {
     const [data, setData] = useState([''])
-
-    fetch("https://swapi.dev/api/people/1")
+    const loadData = () => { 
+        fetch("https://swapi.dev/api/people/1")
         .then(response => response.json())
         .then(data => setData(data))
+    }
+
+    useEffect(() => {
+        loadData()
+    })
     
-        return(
-        <div> 
-            <h2>{data.name}</h2> 
-        </div>
+    
+    return(
+        <span>{data.name}</span> 
     )
 }
 
