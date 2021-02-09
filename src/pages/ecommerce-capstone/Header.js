@@ -6,7 +6,7 @@ function Header() {
     const cartClassName = cartItems.length > 0 ? "ri-shopping-cart-fill" : "ri-shopping-cart-line"
 
     return (
-        <header>
+        <header className="ecommerce-header">
             <p>
                 <i className={`${cartClassName} ri-fw ri-2x`}></i>
             </p>

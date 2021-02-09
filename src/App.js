@@ -27,13 +27,14 @@ export default function App() {
           path="/" exact > 
           <MainSection /> 
         </Route> 
+
         <Route 
           path="/netflix-react-example" > 
             <NetFlixMain/> 
         </Route> 
 
         <Route
-          path="ecommerce-capstone">
+          path="/ecommerce-capstone">
             <EcommercePhotosApp /> 
         </Route>
 

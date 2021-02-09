@@ -10,8 +10,9 @@ function EcommercePhotosApp() {
     return(
         <section className="ecommerce-capstone-section">
             <div className="ecommerce-capston-wrapper lg:py-10">
+                <Header /> 
                 <div className="ecommerce-capstone-main"> 
-                    <Header /> 
+                    
 
                     <Cart /> 
                     <Photos /> 
