@@ -1,4 +1,5 @@
 import React, {useState, useContext} from 'react'
+import './style.css'
 import {Context} from './Context' 
 
 function Cart() {
