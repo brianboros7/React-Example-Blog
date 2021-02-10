@@ -1,8 +1,14 @@
-import React, { useState, useContext } from "react"
-import {Context} from './Context'
+import React, {useContext} from 'react'; 
+import './style.css'
+import Image from "./Image"
+import {Context} from "./Context"
+import {getClass} from "./index.js"
+import { Card } from 'react-bootstrap';
 import PropTypes from 'prop-types'; 
 
-function Image({className, img}) {
+
+function Photos() {
+    const {allPhotos} = useContext(Context)
     const [hovered, setHovered] = useState(false)
     const {toggleFavorite, addToCart, cartItems, removeFromCart} = useContext(Context)
 
@@ -24,26 +30,27 @@ function Image({className, img}) {
             return <i className="ri-add-circle-line cart" onClick={() => addToCart(img)}></i>
         }
     }
-
-
-
-    return (
-        <div 
-            className={`${className} image-container`}
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-        >
-           
-            <img src={img.url} className="image-grid" alt={''} />
-            <div> 
+    
+    const imageElements = allPhotos.map((img, i) => (
+        <Card key={img.id}> 
+            <Card.Img>        
+                <Image img={img} className={getClass(i)} />
+            </Card.Img>
+            <Card.Body>
                 {heartIcon()}
                 {cartIcon()}
-            </div> 
-        </div>
+            </Card.Body>
+        </Card>
+    ))
+    
+    return (
+        <main className="photos">
+            {imageElements}
+        </main>
     )
 }
 
-Image.propTypes = {
+Photos.propTypes = {
     className: PropTypes.string,
     img: PropTypes.shape({
         id: PropTypes.string.isRequired,
@@ -52,4 +59,4 @@ Image.propTypes = {
     })
 }
 
-export default Image
+export default Photos  

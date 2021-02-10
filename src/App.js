@@ -11,6 +11,10 @@ import MovieSearch from './pages/movie-search/MovieSearch';
 import ToDoApp from './pages/todo-app/ToDoApp'; 
 import TypingGame from './pages/speed-typing-game/TypingGame'; 
 
+import Photos from './pages/ecommerce-capstone/Photos'; 
+import Cart from './pages/ecommerce-capstone/Cart'; 
+
+
 
 import { 
   BrowserRouter as Router, 
@@ -52,6 +56,16 @@ export default function App() {
           path="/speed-typing-game">
             <TypingGame />  
         </Route>
+
+        <Route
+          path="/photos">
+            <Photos /> 
+      </Route> 
+      <Route
+          path="/cart">
+          <Cart /> 
+      </Route> 
+
       </Switch>
     </Router>
   )

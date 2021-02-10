@@ -1,6 +1,7 @@
 import React, {useContext} from 'react' 
 import './style.css'
 import {Context} from "./Context"
+import {Link} from 'react-router-dom'
 
 function Header() {
     const {cartItems} = useContext(Context)
@@ -8,9 +9,11 @@ function Header() {
 
     return (
         <header className="ecommerce-header">
-            <p>
+            <Link to="/"><h2>Pic Some</h2></Link>
+            <Link to="/cart" className="cart-icon">
                 <i className={`${cartClassName} ri-fw ri-2x`}></i>
-            </p>
+                <p className="cart-icon-p">Cart</p>
+            </Link>
         </header>
     )
 }
